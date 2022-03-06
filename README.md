@@ -24,7 +24,7 @@ Main Menu Screen:
 
 Game Screen:
 
-<img width="386" alt="image" src="https://user-images.githubusercontent.com/92392940/156165051-3ab764c6-82b2-4336-b60a-b2ce87badac5.png">
+![image](https://user-images.githubusercontent.com/92392940/156915699-bf78906f-b26a-410b-8851-9af15ce2c30c.png)
 
 Game Over Screen:
 
