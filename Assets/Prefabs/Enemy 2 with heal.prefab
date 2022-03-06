@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: -5892354481101193526}
   - component: {fileID: 7054046731166238934}
   - component: {fileID: -6998311541046751871}
-  - component: {fileID: 7878584721868670306}
   - component: {fileID: -90610700496065161}
   - component: {fileID: -1468932395559881371}
+  - component: {fileID: 2707949180558727250}
   m_Layer: 7
-  m_Name: Enemy 2
+  m_Name: Enemy 2 with heal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,28 +83,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0021144152, y: 0}
   serializedVersion: 2
-  m_Radius: 0.3526487
---- !u!114 &7878584721868670306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5090569447190520441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6400715c77baf346b1ab9b17dd9c23a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlayer: 0
-  health: 10
-  score: 20
-  hitEffect: {fileID: 3073401037637558013, guid: 4e6397f699755c54f8df1eeaa40a6cea, type: 3}
-  healEffect: {fileID: 3073401037637558013, guid: eee03e39d3ed07440b70bd54787d52fe, type: 3}
-  applyCameraShake: 0
-  throwPill: 0
+  m_Radius: 1.6403476
 --- !u!114 &-90610700496065161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,11 +114,30 @@ MonoBehaviour:
   projectilePrefab: {fileID: 3723182561543749720, guid: 8e3274861b3863b409577c5f34112bed, type: 3}
   projectileSpeed: 8
   projectileLifeTime: 5
-  baseFiringRate: 2
+  baseFiringRate: 0.5
   useAI: 1
-  firingRateVariance: 0.5
-  minimumFiringRate: 0.3
+  firingRateVariance: 0.1
+  minimumFiringRate: 0.1
   isFiring: 0
+--- !u!114 &2707949180558727250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5090569447190520441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b4b15bb583d8134393056212e8cd7bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+  health: 400
+  score: 1000
+  hitEffect: {fileID: 3073401037637558013, guid: 4e6397f699755c54f8df1eeaa40a6cea, type: 3}
+  applyCameraShake: 0
+  throwPill: 1
+  healerObject: {fileID: 3723182561543749720, guid: e06209a25f3a4664eab64251f3d873d7, type: 3}
 --- !u!1 &6900048170653481067
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,7 +164,7 @@ Transform:
   m_GameObject: {fileID: 6900048170653481067}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 8855033125557189633}
   m_RootOrder: 0
@@ -209,7 +209,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 600c8e258d6d04c4f8ab3ce19d3f1a7f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 22eb86e71c710ee4086974732fd6a0e6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -242,6 +242,14 @@ PrefabInstance:
     - target: {fileID: 6835227568233507343, guid: 2c9d96db1b7cd1a4abb01822f835ce0f, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835227568233507343, guid: 2c9d96db1b7cd1a4abb01822f835ce0f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835227568233507343, guid: 2c9d96db1b7cd1a4abb01822f835ce0f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6835227568233507343, guid: 2c9d96db1b7cd1a4abb01822f835ce0f, type: 3}
       propertyPath: m_LocalPosition.x

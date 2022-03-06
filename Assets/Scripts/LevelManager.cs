@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] float sceneLoadDelay = 2f;
-     ScoreKeeper scoreKeeper;
+    ScoreKeeper scoreKeeper;
 
      void Awake() {
      }
@@ -22,8 +22,12 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
+    public void LoadResults() {
+        SceneManager.LoadScene("Results");
+    }
+
     public void LoadGameOver() {
-        StartCoroutine(QuitAndLoad("GameOver", sceneLoadDelay));
+        StartCoroutine(QuitAndLoad("GameOver 1", sceneLoadDelay));
     }
 
     public void QuitGame() {
